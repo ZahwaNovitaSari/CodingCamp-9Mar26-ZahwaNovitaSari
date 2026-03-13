@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahwa's Life Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="card header-card">
+            <h1 id="clock">00:00:00</h1>
+            <p id="date"></p>
+            <h2 id="greeting">Good Morning, Future Engineer!</h2>
+        </div>
+
+        <div class="main-grid">
+            <div class="left-column">
+                <div class="card">
+                    <h3>Focus Timer</h3>
+                    <div class="timer-settings">
+                        <button onclick="setTimer(25)">25m</button>
+                        <button onclick="setTimer(45)">45m</button>
+                        <button onclick="setTimer(60)">60m</button>
+                    </div>
+                    <div class="timer-display" id="timer">25:00</div>
+                    <div class="button-group">
+                        <button id="start-timer">Start</button>
+                        <button id="stop-timer">Stop</button>
+                        <button id="reset-timer">Reset</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Quick Links</h3>
+                    <div class="input-group">
+                        <input type="text" id="link-name" placeholder="Link name">
+                        <input type="text" id="link-url" placeholder="URL">
+                        <button id="add-link">Add</button>
+                    </div>
+                    <div id="links-container" class="links-list"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Tasks</h3>
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="Add a new task...">
+                    <button id="add-task">Add</button>
+                </div>
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
